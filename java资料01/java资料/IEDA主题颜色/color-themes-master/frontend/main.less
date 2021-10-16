@@ -1,0 +1,120 @@
+@import "./styles/link";
+@import "./styles/flex";
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  src: url("./fonts/SourceCodePro-Light.ttf");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: bold;
+  src: url("./fonts/SourceCodePro-Semibold.ttf");
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  color: #333;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+a {
+  .m-link(#007dcc);
+
+  &:visited:not(.ignore-visited) {
+    .m-link(#a300cc);
+  }
+}
+
+.button-link {
+  border: none;
+  background: none;
+  padding: 0;
+  -webkit-appearance: none;
+  .m-link(#007dcc);
+  cursor: pointer;
+  border-bottom-style: dashed !important;
+  white-space: nowrap;
+}
+
+select,
+input,
+button,
+textarea {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  color: #333;
+  padding: .1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  &:focus {
+    outline: none;
+  }
+}
+
+.single-column-wrapper {
+  .m-display-flex-line(nowrap, flex-start);
+
+  .spacer {
+    .m-flex();
+  }
+
+  .content {
+    padding: 0 1em;
+    .m-flex(1, 1, 40em);
+
+    h1 {
+      font-size: 1.5em;
+      margin-top: 1.5em;
+      font-weight: normal;
+    }
+
+    h2 {
+      font-size: 1.3em;
+      margin-top: 1em;
+      font-weight: normal;
+    }
+  }
+}
+
+.disclaimer {
+  background-color: #fff;
+  color: #ccc;
+  padding: 1em 2em;
+  font-size: .8em;
+  margin-top: 3em;
+  &>* {
+    opacity: .75;
+  }
+}
+
+abbr {
+  .m-link(#333);
+  border-bottom-style: dashed !important;
+
+  &:after {
+    content: "?";
+    vertical-align: super;
+    color: #666;
+    font-size: .75em;
+  }
+}
+
+.search-support {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}

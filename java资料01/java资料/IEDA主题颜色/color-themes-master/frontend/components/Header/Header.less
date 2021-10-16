@@ -1,0 +1,56 @@
+@import "../../styles/flex";
+
+#header {
+  .m-display-flex-line(wrap);
+  position: relative;
+  z-index: 3;
+
+  padding: 0.75em 2em;
+  background-color: #fff;
+
+  .logo {
+    .m-flex(0);
+    font-size: 1.5em;
+  }
+
+  .logo-image {
+    border: none;
+
+    img {
+      border: none;
+      margin-right: .25em;
+      position: relative;
+      top: .1em;
+    }
+  }
+
+  .menu {
+    .m-flex(1, 1);
+    .m-display-flex-line(wrap);
+
+    margin: 0 2em;
+    padding: 0;
+
+    li {
+      .m-flex(0);
+
+      list-style-type: none;
+      margin: 0 0.5em;
+    }
+  }
+
+  .login-panel {
+    margin-left: 1.25em;
+  }
+
+  .spacer {
+    .m-flex();
+  }
+}
+
+#disclaimer {
+  background-color: rgba(255, 251, 181, 0.87);
+  font-size: 0.8em;
+  opacity: .5;
+  padding: .5em 2.5em;
+}
